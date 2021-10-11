@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>csust自动跳转服务</title>
 </head>
 
-<body >
-    <h1>请访问我们的主页来查看更多</h1>
-    <a href="https://github.com/Anthony-Hoo/hugeURLer">https://github.com/Anthony-Hoo/hugeURLer</a>
+<body class="bg-gray-200">
+    <div class="contain bg-gradient-to-r shadow-2xl  shadow-dark-100
+     from-green-300 to-blue-300
+    rounded-2xl border-green-100 border-double ring-3 ring-opacity-30
+    ">
+        <h1 class="text-4xl font-semibold leading-loose
+        text-center text-gray-700 align-top tracking-widest">请访问我们的主页来查看更多</h1>
+        <div class="link_text"><a class="hover:underline leading-loose capitalize mt-6"
+                href="https://github.com/Anthony-Hoo/hugeURLer/tree/ccc03a2530132429639be9c6a0861e7c9312d6c9">https://github.com/Anthony-Hoo/hugeURLer</a>
+        </div>
+    </div>
 </body>
 
-</html>
+<style>
+    @font-face {
+        font-family: NotoSerif;
+        src: url("./statics/fonts/Noto_Serif_SC/NotoSerifSC-SemiBold.otf");
+    }
+    @font-face {
+        font-family: Andada;
+        src: url("./statics/fonts/Andada_Pro/AndadaPro-SemiBold.ttf");
+    }
+
+    .contain {
+        text-align: center;
+        margin-top: 10rem;
+        margin-left: 40rem;
+        margin-right: 40rem;
+    }
+
+    h1 {
+        font-family: 'NotoSerif';
+    }
+
+    .link_text {
+        font-family: 'Andada';
+    }
+</style>
