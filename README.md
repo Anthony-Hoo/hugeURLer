@@ -12,7 +12,13 @@ hugeURLer 是一个基于 Python 和 GitHub action 的短链接服务
 
 通过 `redirectionConfig.csv` 来记录需要跳转的 url 与短链接的对应关系，再通过 `src/pageGen.py` 来生成跳转页面到 `pages/` 。
 
-在仓库 push 到 GitHub 上时，在 `.github/workflows/` 设置好的 action 会执行，生成跳转页面并部署到 GitHub page 上。这时大家将能够访问跳转。
+# 现在已经换成了 Vercel
+# 现在已经换成了 Vercel
+# 现在已经换成了 Vercel
+
+~~在仓库 push 到 GitHub 上时，在 `.github/workflows/` 设置好的 action 会执行，生成跳转页面并部署到 GitHub page 上。这时大家将能够访问跳转。~~
+
+
 
 ### 未来计划
 
