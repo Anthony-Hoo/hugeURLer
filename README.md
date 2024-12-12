@@ -19,11 +19,12 @@ hugeURLer 是一个基于 Python 和 GitHub action 的短链接服务
 ~~在仓库 push 到 GitHub 上时，在 `.github/workflows/` 设置好的 action 会执行，生成跳转页面并部署到 GitHub page 上。这时大家将能够访问跳转。~~
 
 
-
 ### 未来计划
 
 - [x] 美化跳转页面
 - [x] 美化主页
+- [ ] **都tmd换成 Vercel 了还搁这 GitHub Pages 呢啊？？？**
+- [ ] **把那逼 HDR 视频换一下啊**
 - [ ] 更便捷地增加新跳转纪录
 
 ### 最后
