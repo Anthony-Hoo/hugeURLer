@@ -1,14 +1,90 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <title>csust自动跳转服务</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSUST 自动跳转服务</title>
+
+    <!-- 引入自定义字体（得意黑） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-smiley-sans-oblique-regular/font.css">
+    <style>
+        html {
+            font-family: Roboto, "Smiley Sans Oblique", sans-serif;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+            /* 继承自 html 的字体 */
+        }
+
+        video {
+            margin: 20px 0;
+            width: 90%; /* 增大视频宽度 */
+            max-width: 1000px; /* 设置更大的最大宽度 */
+            /* border: 2px solid #fff; */ /* 已取消视频的白色外框 */
+            border-radius: 10px; /* 保持圆角效果，如需去除可删除此行 */
+        }
+
+        a {
+            color: #00f6ff;
+            text-decoration: none;
+            border: 1px solid #00f6ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        a:hover {
+            background: #00f6ff;
+            color: #000;
+        }
+
+        .fa-github {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 600px) {
+            video {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            a {
+                padding: 8px 16px;
+                font-size: 1em;
+            }
+        }
+    </style>
+
+    <!-- 使用 BootCDN 引入 Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<body >
+<body>
     <h1>请访问我们的主页来查看更多</h1>
-    <a href="https://github.com/Anthony-Hoo/hugeURLer">https://github.com/Anthony-Hoo/hugeURLer</a>
+    <video src="/video/slogan.mp4" autoplay muted loop playsinline></video>
+    <a href="https://github.com/Anthony-Hoo/hugeURLer" target="_blank">
+        <i class="fab fa-github"></i> Anthony-Hoo/hugeURLer
+    </a>
 </body>
-
 </html>
