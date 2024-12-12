@@ -1,1 +1,74 @@
-<!doctypehtml> <html lang=zh-CN> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1"name=viewport> <title>genshin</title> <link href=https://cdn.jsdelivr.net/npm/cn-fontsource-smiley-sans-oblique-regular/font.css rel=stylesheet> <link href=https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css rel=stylesheet> <style>html{font-family:Roboto,"Smiley Sans Oblique",sans-serif}body{margin:0;padding:0;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.3s;position:relative}body[data-theme=black]{background:#000;color:#fff}body[data-theme=white]{background:#fff;color:#000}h1{margin-bottom:20px;font-size:2em;text-align:center}video{margin:20px 0;width:90%;max-width:1000px;border-radius:10px;aspect-ratio:3/2;object-fit:cover;background:#000}body[data-theme=white] video{background:#fff}.redirect-message{margin-top:20px;font-size:1.2em;text-align:center}.progress-container{width:80%;max-width:600px;height:20px;border-radius:10px;overflow:hidden;margin-top:10px}body[data-theme=black] .progress-container{background:#222}body[data-theme=white] .progress-container{background:#ddd}.progress-bar{height:100%;width:0%;background:#00f6ff;transition:width .1s linear}.cancel-button{margin-top:20px;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-size:1em;transition:.3s}body[data-theme=black] .cancel-button{background:#ff4d4d;color:#fff}body[data-theme=black] .cancel-button:hover{background:#ff1a1a}body[data-theme=white] .cancel-button{background:#f66;color:#000}body[data-theme=white] .cancel-button:hover{background:#f33}.theme-toggle-button{position:fixed;top:20px;right:20px;border:none;padding:10px 15px;border-radius:5px;cursor:pointer;transition:.3s;display:flex;align-items:center;gap:5px}body[data-theme=black] .theme-toggle-button{background:#222;color:#fff}body[data-theme=black] .theme-toggle-button:hover{background:#444}body[data-theme=white] .theme-toggle-button{background:#ddd;color:#000}body[data-theme=white] .theme-toggle-button:hover{background:#bbb}@media(max-width:600px){h1{font-size:1.5em}.redirect-message{font-size:1em}.progress-container{width:90%}.cancel-button{padding:8px 16px;font-size:.9em}.theme-toggle-button{padding:8px 12px;font-size:.9em}}</style> <script> var r; function setTheme(e){document.body.setAttribute("data-theme",e);let t=document.getElementById("v"),n=document.getElementById("tt");"black"===e?(t.src="/video/slogan.mp4",n.innerHTML='<i class="fas fa-sun"></i>'):(t.src="/video/slogan-invert.mp4",n.innerHTML='<i class="fas fa-moon"></i>')}function toggleTheme(){let e=document.body.getAttribute("data-theme");setTheme("black"===e?"white":"black")}function startRedirect(){var e=0,t=document.getElementById("p");r=setInterval(function(){var n=Math.min((e+=100)/3e3*100,100);t.style.width=n+"%",e>=3e3&&(clearInterval(r),window.location.href="https://ys.mihoyo.com/")},100)}function cancelRedirect(){clearInterval(r),document.getElementById("p").style.width="0%",document.querySelector(".redirect-message").textContent="跳转已取消。",document.getElementById("cb").style.display="none"}document.addEventListener("DOMContentLoaded",function(){setTheme(.5>Math.random()?"black":"white"),startRedirect()}); </script> </head> <body> <button class=theme-toggle-button id=tt onclick=toggleTheme()></button> <h1>正在跳转至： https://ys.mihoyo.com/</h1> <video autoplay id=v loop muted playsinline></video> <div class=redirect-message>请稍候，正在为您跳转...</div> <div class=progress-container><div class=progress-bar id=p></div></div> <button class=cancel-button id=cb onclick=cancelRedirect()>取消跳转</button>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>genshin</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-smiley-sans-oblique-regular/font.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+html{font-family:Roboto,"Smiley Sans Oblique",sans-serif;}
+body{margin:0;padding:0;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.3s;position:relative}
+body[data-theme=black]{background:#000;color:#fff}
+body[data-theme=white]{background:#fff;color:#000}
+h1{margin-bottom:20px;font-size:2em;text-align:center}
+video{margin:20px 0;width:90%;max-width:1000px;border-radius:10px;aspect-ratio:3/2;object-fit:cover;background:#000}
+body[data-theme=white] video{background:#fff}
+.redirect-message{margin-top:20px;font-size:1.2em;text-align:center}
+.progress-container{width:80%;max-width:600px;height:20px;border-radius:10px;overflow:hidden;margin-top:10px}
+body[data-theme=black] .progress-container{background:#222}
+body[data-theme=white] .progress-container{background:#ddd}
+.progress-bar{height:100%;width:0%;background:#00f6ff;transition:width .1s linear}
+.cancel-button{margin-top:20px;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-size:1em;transition:.3s}
+body[data-theme=black] .cancel-button{background:#ff4d4d;color:#fff}
+body[data-theme=black] .cancel-button:hover{background:#ff1a1a}
+body[data-theme=white] .cancel-button{background:#f66;color:#000}
+body[data-theme=white] .cancel-button:hover{background:#f33}
+.theme-toggle-button{position:fixed;top:20px;right:20px;border:none;padding:10px 15px;border-radius:5px;cursor:pointer;transition:.3s;display:flex;align-items:center;gap:5px}
+body[data-theme=black] .theme-toggle-button{background:#222;color:#fff}
+body[data-theme=black] .theme-toggle-button:hover{background:#444}
+body[data-theme=white] .theme-toggle-button{background:#ddd;color:#000}
+body[data-theme=white] .theme-toggle-button:hover{background:#bbb}
+@media(max-width:600px){h1{font-size:1.5em}.redirect-message{font-size:1em}.progress-container{width:90%}.cancel-button{padding:8px 16px;font-size:.9em}.theme-toggle-button{padding:8px 12px;font-size:.9em}}
+</style>
+<script>
+var r;
+function setTheme(t){
+  document.body.setAttribute('data-theme',t);
+  const v=document.getElementById('v'),btn=document.getElementById('tt');
+  if(t==='black'){v.src='/video/slogan.mp4';btn.innerHTML='<i class="fas fa-sun"></i>';}
+  else{v.src='/video/slogan-invert.mp4';btn.innerHTML='<i class="fas fa-moon"></i>';}
+}
+function toggleTheme(){
+  const c=document.body.getAttribute('data-theme');
+  setTheme(c==='black'?'white':'black');
+}
+function startRedirect(){
+  var u="https://ys.mihoyo.com/",T=3000,I=100,e=0,p=document.getElementById("p");
+  r=setInterval(function(){
+    e+=I;var pr=Math.min(e/T*100,100);
+    p.style.width=pr+"%";
+    if(e>=T){clearInterval(r);window.location.href=u;}
+  },I);
+}
+function cancelRedirect(){
+  clearInterval(r);
+  document.getElementById("p").style.width="0%";
+  document.querySelector(".redirect-message").textContent="跳转已取消。";
+  document.getElementById("cb").style.display="none";
+}
+document.addEventListener('DOMContentLoaded',function(){
+  setTheme(Math.random()<0.5?'black':'white');
+  startRedirect();
+});
+</script>
+</head>
+<body>
+<button class="theme-toggle-button" id="tt" onclick="toggleTheme()"></button>
+<h1>正在跳转至： https://ys.mihoyo.com/</h1>
+<video id="v" autoplay muted loop playsinline></video>
+<div class="redirect-message">请稍候，正在为您跳转...</div>
+<div class="progress-container"><div class="progress-bar" id="p"></div></div>
+<button class="cancel-button" id="cb" onclick="cancelRedirect()">取消跳转</button>
+</body>
+</html>
