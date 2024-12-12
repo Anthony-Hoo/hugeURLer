@@ -15,9 +15,9 @@ def keyGen(len=6):
     while newKey in keyExistsList:
         newKey = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(len))
     return newKey
-    
+
 def readCSVByline():
-    with open('./redirectionConfig.csv', 'r') as f:
+    with open('./redirectionConfig.csv', 'r', encoding="utf-8") as f:
         data = list(csv.reader(f))
         del(data[0])
         return data
@@ -25,5 +25,5 @@ def readCSVByline():
 def addRecord(url):
     key = keyGen()
     text = "\n" + key + "," + url 
-    with open("./redirectionConfig.csv", "a+") as f:
+    with open("./redirectionConfig.csv", "a+", encoding="utf-8") as f:
         f.write(text)
