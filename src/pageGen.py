@@ -1,8 +1,11 @@
-def pageGen(identifier, url):
-    template = ""
-    with open('./template/template.html', 'r') as f:
+from os import mkdir
+
+
+def page_gen(identifier, url):
+    with open("./template/template.html", "r", encoding="utf-8") as f:
         template = f.read()
     template = template.replace("[/title/]", identifier)
     template = template.replace("[/url/]", url)
-    with open('./pages/'+identifier+'.html', 'w') as f:
+    mkdir("./pages/" + identifier)
+    with open("./pages/" + identifier + "/index.html", "w", encoding="utf-8") as f:
         f.write(template)
