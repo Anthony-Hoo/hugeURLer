@@ -1,7 +1,7 @@
 from os import mkdir
 
-def pageGen(identifier, url):
-    template = ""
+
+def page_gen(identifier, url):
     with open("./template/template.html", "r", encoding="utf-8") as f:
         template = f.read()
     template = template.replace("[/title/]", identifier)
