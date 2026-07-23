@@ -26,12 +26,17 @@ body[data-theme=white] .theme-toggle:hover{background:#bbb}
 @media(max-width:600px){h1{font-size:1.5em}a.github-button{padding:8px 16px;font-size:1em}.theme-toggle{padding:8px 12px;font-size:.9em}}
 </style>
 <script>
-const HEVC=document.createElement('video').canPlayType('video/mp4; codecs="hvc1.2.4.L120.B0"')==='probably';
+const HEVC_CODEC='hvc1.2.4.L183.B0';
+const HEVC=document.createElement('video').canPlayType('video/mp4; codecs="'+HEVC_CODEC+'"')==='probably';
 function setTheme(t){
   document.body.setAttribute('data-theme',t);
   const v=document.getElementById('v'),btn=document.getElementById('t');
-  if(t==='black'){v.src='/video/slogan'+(HEVC?'-hevc':'')+'.mp4';btn.innerHTML='<i class="fas fa-sun"></i>';}
-  else{v.src='/video/slogan-invert'+(HEVC?'-hevc':'')+'.mp4';btn.innerHTML='<i class="fas fa-moon"></i>';}
+  const base=t==='black'?'/video/slogan':'/video/slogan-invert';
+  v.onerror=function(){
+    if(v.src.indexOf('-hevc.mp4')!==-1){v.onerror=null;v.src=base+'.mp4';}
+  };
+  v.src=base+(HEVC?'-hevc':'')+'.mp4';
+  btn.innerHTML=t==='black'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';
 }
 function toggleTheme(){
   const c=document.body.getAttribute('data-theme');
