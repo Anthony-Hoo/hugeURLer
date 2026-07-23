@@ -33,11 +33,12 @@ body[data-theme=white] .theme-toggle-button:hover{background:#bbb}
 </style>
 <script>
 var r;
+const HEVC=document.createElement('video').canPlayType('video/mp4; codecs="hvc1.2.4.L120.B0"')==='probably';
 function setTheme(t){
   document.body.setAttribute('data-theme',t);
   const v=document.getElementById('v'),btn=document.getElementById('tt');
-  if(t==='black'){v.src='/video/slogan.mp4';btn.innerHTML='<i class="fas fa-sun"></i>';}
-  else{v.src='/video/slogan-invert.mp4';btn.innerHTML='<i class="fas fa-moon"></i>';}
+  if(t==='black'){v.src='/video/slogan'+(HEVC?'-hevc':'')+'.mp4';btn.innerHTML='<i class="fas fa-sun"></i>';}
+  else{v.src='/video/slogan-invert'+(HEVC?'-hevc':'')+'.mp4';btn.innerHTML='<i class="fas fa-moon"></i>';}
 }
 function toggleTheme(){
   const c=document.body.getAttribute('data-theme');
