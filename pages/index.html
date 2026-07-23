@@ -26,11 +26,12 @@ body[data-theme=white] .theme-toggle:hover{background:#bbb}
 @media(max-width:600px){h1{font-size:1.5em}a.github-button{padding:8px 16px;font-size:1em}.theme-toggle{padding:8px 12px;font-size:.9em}}
 </style>
 <script>
+const HEVC=document.createElement('video').canPlayType('video/mp4; codecs="hvc1.2.4.L120.B0"')==='probably';
 function setTheme(t){
   document.body.setAttribute('data-theme',t);
   const v=document.getElementById('v'),btn=document.getElementById('t');
-  if(t==='black'){v.src='/video/slogan.mp4';btn.innerHTML='<i class="fas fa-sun"></i>';}
-  else{v.src='/video/slogan-invert.mp4';btn.innerHTML='<i class="fas fa-moon"></i>';}
+  if(t==='black'){v.src='/video/slogan'+(HEVC?'-hevc':'')+'.mp4';btn.innerHTML='<i class="fas fa-sun"></i>';}
+  else{v.src='/video/slogan-invert'+(HEVC?'-hevc':'')+'.mp4';btn.innerHTML='<i class="fas fa-moon"></i>';}
 }
 function toggleTheme(){
   const c=document.body.getAttribute('data-theme');
