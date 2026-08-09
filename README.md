@@ -1,3 +1,5 @@
+
+
 # hugeURLer
 [Read This in English](#hugeurler-en)
 
@@ -8,7 +10,7 @@ hugeURLer 是一个基于 Python 和 Vercel 的短链接服务
 
 #### 如果您没有本仓库的 push 权限
 
-请将本仓库 clone 到本地，然后在终端执行 `python3 .\src\addNewRedirection.py  <url>` ，就能创建一个指向你设置的 url 的跳转页面。
+请将本仓库 clone 到本地，然后在终端执行 `python3 ./src/addNewRedirection.py <url>` ，就能创建一个指向你设置的 url 的跳转页面。
 
 随后，您只需要 pr 到本仓库，在我们 merge 后，您就能通过这个短链接来访问您设置的 url 。
 
@@ -46,7 +48,7 @@ hugeURLer is a short URL service based on Python and Vercel
 
 #### If you do not have push access to this repository
 
-Clone this repository to your local machine, then execute `python3 .\src\addNewRedirection.py <url>` in the terminal to create a redirection page pointing to the URL you set.
+Clone this repository to your local machine, then execute `python3 ./src/addNewRedirection.py <url>` in the terminal to create a redirection page pointing to the URL you set.
 
 Afterward, you only need to submit a pull request (PR) to this repository. Once we merge it, you can access your desired URL using the short link.
 
